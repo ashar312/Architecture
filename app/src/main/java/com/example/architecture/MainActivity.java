@@ -46,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this, "Main Activity On Pause Triggered", Toast.LENGTH_SHORT).show();
+        Log.d("Main Activity","OnStop");
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         Toast.makeText(this, "Main Activity On Destroy Triggered", Toast.LENGTH_SHORT).show();
